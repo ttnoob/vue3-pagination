@@ -8,7 +8,7 @@
       />
     </li>
     <li class="PaginationControl">
-      <icon-chevron-left
+      <icon-page-left
         class="Control"
         :class="{ 'Control-active': isPrevControlsActive }"
         @click="goToPrev"
@@ -23,7 +23,7 @@
       @update="updatePageHandler"
     />
     <li class="PaginationControl">
-      <icon-chevron-right
+      <icon-page-right
         class="Control"
         :class="{ 'Control-active': isNextControlsActive }"
         @click="goToNext"
@@ -42,14 +42,20 @@
 <script lang="ts">
 import { defineComponent, computed } from 'vue';
 import VPage from './atoms/VPage.vue';
-import IconPageFirst from '../assets/icons/page-first.svg';
-import IconPageLast from '../assets/icons/page-last.svg';
-import IconChevronLeft from '../assets/icons/chevron-left.svg';
-import IconChevronRight from '../assets/icons/chevron-right.svg';
+import IconPageFirst from './atoms/IconFirst.vue';
+import IconPageLast from './atoms/IconLast.vue';
+import IconPageLeft from './atoms/IconLeft.vue';
+import IconPageRight from './atoms/IconRight.vue';
 
 export default defineComponent({
   name: 'VPagination',
-  components: { IconPageFirst, IconChevronLeft, IconChevronRight, IconPageLast, VPage },
+  components: { 
+    IconPageFirst, 
+    IconPageLast, 
+    IconPageLeft, 
+    IconPageRight, 
+    VPage 
+    },
   props: {
     pages: {
       type: Number,

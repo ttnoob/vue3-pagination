@@ -19,11 +19,13 @@
 
 <script lang="ts">
 import { defineComponent, computed } from 'vue';
-import IconPaginationDots from '../../assets/icons/pagination-dots.svg';
+import IconPaginationDots from './IconDots.vue';
 
 export default defineComponent({
   name: 'VPage',
-  components: { IconPaginationDots },
+  components: { 
+    IconPaginationDots
+     },
   props: {
     page: {
       type: Number,

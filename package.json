@@ -32,7 +32,7 @@
     "dist"
   ],
   "scripts": {
-    "prepack": "rollup -c build/rollup.config.js",
+    "postinstall": "rollup -c build/rollup.config.js",
     "serve": "vite serve",
     "build:demo": "vite build",
     "build:component": "rollup -c build/rollup.config.js"
